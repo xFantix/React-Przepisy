@@ -1,8 +1,12 @@
-
+import React from 'react';
+import * as style from './style/appStyle';
+import Navigation from './components/Navigation';
+import './style/index.css';
 function App() {
   return (
-    <div className="App">
-    </div>
+    <style.AppStyle className="App">
+      <Navigation/>
+    </style.AppStyle>
   );
 }
 
