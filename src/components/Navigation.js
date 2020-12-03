@@ -17,7 +17,7 @@ const Navigation = () => {
             <style.LinkList to="/wlasciwosci-produktow">Właściwości produktów</style.LinkList>
           </style.ElementOfList>
           <style.ElementOfList>
-            <style.LinkList to="/wina"><i class="far fa-heart"></i></style.LinkList>
+            <style.LinkList to="/wina"><i className="far fa-heart"></i></style.LinkList>
           </style.ElementOfList>
         </style.NavigationList>
       </style.NavContainer>

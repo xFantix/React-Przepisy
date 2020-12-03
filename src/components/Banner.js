@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import * as style from '../style/bannerStyle';
 const Banner = () => {
     return ( 

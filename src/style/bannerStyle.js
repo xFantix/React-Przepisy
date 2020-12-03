@@ -11,7 +11,7 @@ export const Container = styled.div`
     text-align:center;
     justify-content:center;
     background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.405)),url(${bg});
-    height:400px;
+    height:600px;
     background-position:top;
     background-size:cover;
 `

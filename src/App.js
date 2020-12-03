@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import * as style from './style/appStyle';
 import Navigation from './components/Navigation';
 import './style/index.css';
@@ -7,20 +7,27 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
+import {AppContext} from './context/AppContext';
 import Home from './components/Home';
+
 const App = () => {
 
-  
-
+  const [topRecipe, setTopRecipe] = useState([]);
 
   return (
     <Router>
-    <style.AppStyle className="App">
+      <AppContext.Provider
+      value={{
+        topRecipe,
+        setTopRecipe,
+      }}>
+    <style.AppStyle>
       <Navigation/>
       <Switch>
         <Route path="/" exact component={Home}/>
       </Switch>
     </style.AppStyle>
+    </AppContext.Provider>
     </Router>
   );
 }
