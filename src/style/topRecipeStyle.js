@@ -18,5 +18,11 @@ export const Header = styled.h2`
 export const HeaderDescription = styled.p`
     font-family:${fontMontserrat};
     text-align:center;
-    color:#FFD800;
+    color:#282627;
+`
+export const RecipeContainer = styled.div`
+    width:100%;
+    flex-wrap:wrap;
+    display:flex;
+    justify-content:space-around;
 `
