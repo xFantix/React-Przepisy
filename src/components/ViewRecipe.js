@@ -9,7 +9,7 @@ const ViewRecipe = (props) => {
         <style.ContainerViewRecipe>
             <style.Image src={image} alt="image food"/>
             <style.Header>{title}</style.Header>
-            <Link to={`/recipeInformation/${id}`}>
+            <Link to={`/recipe/${id}`}>
                 <style.Button>Let's cook</style.Button>
             </Link>
             

@@ -40,7 +40,7 @@ export const KitchenCard = styled.div`
     position:relative;
     background-position:center;
     background-size:cover;
-    background-image:url(${props=>props.kitchenGB && bgBrit || props.kitchenItaly && bgItaly || props.kitchenIndian && bgIndian });
+    background-image:url(${props=>(props.kitchenGB && bgBrit) || (props.kitchenItaly && bgItaly) || (props.kitchenIndian && bgIndian) });
 `
 export const KitchenCardHeader = styled.h2`
     position:absolute;

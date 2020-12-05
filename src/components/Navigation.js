@@ -4,14 +4,14 @@ const Navigation = () => {
   return (
       <style.NavContainer>
         <style.StyleHeader exact to="/">
-          Twojakuchnia
+          BestRecipe
         </style.StyleHeader>
         <style.NavigationList>
           <style.ElementOfList>
-            <style.LinkList to="/kuchnie">Kuchnie</style.LinkList>
+            <style.LinkList to="/kuchnie">Kitchen</style.LinkList>
           </style.ElementOfList>
           <style.ElementOfList>
-            <style.LinkList to="/przepisy">Przepisy</style.LinkList>
+            <style.LinkList to="/przepisy">Recipe</style.LinkList>
           </style.ElementOfList>
           <style.ElementOfList>
             <style.LinkList to="/wlasciwosci-produktow">Właściwości produktów</style.LinkList>

@@ -6,7 +6,7 @@ import { AppContext } from "./context/AppContext";
 import RecipeInformation from './components/RecipeInformation';
 import Home from "./components/home/Home";
 import Navigation from "./components/Navigation";
-
+import Footer from './components/Footer';
 const App = () => {
   const [topRecipe, setTopRecipe] = useState([]);
 
@@ -22,9 +22,10 @@ const App = () => {
           <Navigation />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/recipeInformation/:id" component={RecipeInformation} />
+            <Route path="/recipe/:id" component={RecipeInformation} />
           </Switch>
         </style.AppStyle>
+        <Footer/>
       </AppContext.Provider>
     </Router>
   );
