@@ -5,6 +5,7 @@ export const ContainerViewRecipe = styled.div`
     flex-direction:column;
     width:350px;
     margin-top:30px;
+    overflow:hidden;
 `
 export const Header = styled.h2`
     font-family:${fontMontserrat};
@@ -28,4 +29,5 @@ export const Button = styled.button`
 `
 export const Image = styled.img`
     border-radius:5px;
+    overflow:hidden;
 `

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as style from '../style/bannerStyle';
+import * as style from '../../style/bannerStyle';
 const Banner = () => {
     return ( 
         <style.Container>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import * as style from "./style/appStyle";
-import Navigation from "./components/Navigation";
 import "./style/index.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AppContext } from "./context/AppContext";
-import Recipe from './components/Recipe';
-import Home from "./components/Home";
+import RecipeInformation from './components/RecipeInformation';
+import Home from "./components/home/Home";
+import Navigation from "./components/Navigation";
 
 const App = () => {
   const [topRecipe, setTopRecipe] = useState([]);
@@ -22,7 +22,7 @@ const App = () => {
           <Navigation />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/recipe/:ID" component={Recipe} />
+            <Route path="/recipeInformation/:id" component={RecipeInformation} />
           </Switch>
         </style.AppStyle>
       </AppContext.Provider>

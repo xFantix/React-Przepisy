@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
-import * as style from "../style/topRecipeStyle";
-import ViewRecipe from './ViewRecipe';
-import {AppContext} from '../context/AppContext';
+import * as style from "../../style/topRecipeStyle";
+import ViewRecipe from '../ViewRecipe';
+import {AppContext} from '../../context/AppContext';
 const TopRecipe = () => {
 
     const { topRecipe,setTopRecipe } = useContext(AppContext);
