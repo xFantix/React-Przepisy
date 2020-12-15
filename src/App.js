@@ -9,6 +9,7 @@ import Navigation from "./components/Navigation";
 import Footer from './components/Footer';
 const App = () => {
   const [topRecipe, setTopRecipe] = useState([]);
+  const [recipeInfo,setRecipeInfo] = useState({});
 
   return (
     <Router>
@@ -16,6 +17,8 @@ const App = () => {
         value={{
           topRecipe,
           setTopRecipe,
+          recipeInfo,
+          setRecipeInfo,
         }}
       >
         <style.AppStyle>
@@ -25,7 +28,7 @@ const App = () => {
             <Route path="/recipe/:id" component={RecipeInformation} />
           </Switch>
         </style.AppStyle>
-        <Footer/>
+        {/* <Footer/> */}
       </AppContext.Provider>
     </Router>
   );

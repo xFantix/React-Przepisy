@@ -4,7 +4,6 @@ import bgItaly from '../image/itFood.jpg';
 import bgBrit from '../image/britFood.jpg';
 import bgIndian from '../image/indianFood.jpg'
 const fontMontserrat = "'Montserrat', sans-serif";
-
 export const Section = styled.section`
     width:100%;
     display:flex;

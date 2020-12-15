@@ -20,7 +20,7 @@ const TopRecipe = () => {
       .then((data) => {
         setTopRecipe(data.results);
       });
-  }, [setTopRecipe]);
+  }, []);
 
  
  const viewList = topRecipe.map(el=><ViewRecipe key={el.id} el={el}/>)
