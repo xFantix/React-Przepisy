@@ -11,7 +11,7 @@ const Navigation = () => {
             <style.LinkList to="/kuchnie">Kitchen</style.LinkList>
           </style.ElementOfList>
           <style.ElementOfList>
-            <style.LinkList to="/przepisy">Recipe</style.LinkList>
+            <style.LinkList to="/searchRecipe">Recipe</style.LinkList>
           </style.ElementOfList>
           <style.ElementOfList>
             <style.LinkList to="/wlasciwosci-produktow">Właściwości produktów</style.LinkList>

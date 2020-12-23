@@ -5,7 +5,7 @@ const Banner = () => {
         <style.Container>
         <style.Header>Kuchnia całego Świata w jednym miejscu</style.Header>
         <style.MediumHeader>Sprawdz setki przepisów z całego świata i zaskocz swoją rodzinę i przyjaciół</style.MediumHeader>
-        <style.ButtonLink to="lol"><style.Button>zobacz przepisy</style.Button></style.ButtonLink>
+        <style.ButtonLink to="/searchRecipe"><style.Button>zobacz przepisy</style.Button></style.ButtonLink>
         </style.Container>
      );
 }

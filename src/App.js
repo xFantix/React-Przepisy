@@ -6,7 +6,7 @@ import { AppContext } from "./context/AppContext";
 import RecipeInformation from './components/RecipeInformation';
 import Home from "./components/home/Home";
 import Navigation from "./components/Navigation";
-import Footer from './components/Footer';
+import SearchRecipe from "./components/SearchRecipe";
 const App = () => {
   const [topRecipe, setTopRecipe] = useState([]);
   const [recipeInfo,setRecipeInfo] = useState({});
@@ -26,6 +26,7 @@ const App = () => {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/recipe/:id" component={RecipeInformation} />
+            <Route path="/searchRecipe" component={SearchRecipe}/>
           </Switch>
         </style.AppStyle>
         {/* <Footer/> */}
