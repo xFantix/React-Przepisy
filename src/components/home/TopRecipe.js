@@ -8,7 +8,7 @@ const TopRecipe = () => {
 
   useEffect(() => {
     const API =
-      "https://api.spoonacular.com/recipes/complexSearch?number=4&apiKey=210c10f0f72a4f999d2c566a257ce155";
+      "https://api.spoonacular.com/recipes/complexSearch?instructionsRequired=true&number=4&apiKey=210c10f0f72a4f999d2c566a257ce155";
     fetch(API)
       .then((response) => {
         if (response.ok) {

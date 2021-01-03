@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import * as style from "../style/recipeInformationStyle";
+import {AppContext} from '../context/AppContext';
 const RecipeInformation = (props) => {
   const { id } = props.match.params;
 
@@ -7,6 +8,9 @@ const RecipeInformation = (props) => {
     loading: true,
     information: {},
   });
+
+  const { favouriteRecipe,setFavouriteRecipe} = useContext(AppContext);
+
 
   useEffect(() => {
     const API = `https://api.spoonacular.com/recipes/${id}/information?apiKey=210c10f0f72a4f999d2c566a257ce155`;
@@ -27,6 +31,23 @@ const RecipeInformation = (props) => {
         });
       });
   }, []);
+
+  // const AddFavouriteRecipeToList = () =>{
+  //   const InformationBlock = {
+  //     name:"",
+  //     link:"",
+  //   }
+  //   InformationBlock.name = recipeInformation.information.title;
+  //   InformationBlock.link = window.location.href;
+    
+  //   const copy = Array.from(Object.create(favouriteRecipe));
+  //   copy.push(InformationBlock);
+
+  //   setFavouriteRecipe({
+  //     copy
+  //   })
+  //   console.log(favouriteRecipe);
+  // }
 
   return (
     <>
@@ -61,6 +82,7 @@ const RecipeInformation = (props) => {
               <style.InformationBar>
                   <style.InformationBarParagraph>{recipeInformation.information.readyInMinutes} minutes</style.InformationBarParagraph>
                   <style.InformationBarParagraph>{recipeInformation.information.servings} servings</style.InformationBarParagraph>
+                  <style.AddFavButton ><i className="far fa-heart"></i></style.AddFavButton>
               </style.InformationBar>
             </style.MealImage>
           </style.Main>

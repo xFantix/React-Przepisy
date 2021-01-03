@@ -8,13 +8,7 @@ const Navigation = () => {
         </style.StyleHeader>
         <style.NavigationList>
           <style.ElementOfList>
-            <style.LinkList to="/kuchnie">Kitchen</style.LinkList>
-          </style.ElementOfList>
-          <style.ElementOfList>
             <style.LinkList to="/searchRecipe">Recipe</style.LinkList>
-          </style.ElementOfList>
-          <style.ElementOfList>
-            <style.LinkList to="/wlasciwosci-produktow">Właściwości produktów</style.LinkList>
           </style.ElementOfList>
           <style.ElementOfList>
             <style.LinkList to="/wina"><i className="far fa-heart"></i></style.LinkList>

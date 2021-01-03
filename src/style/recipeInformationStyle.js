@@ -112,4 +112,9 @@ export const ListIngredientsMobile = styled.ul`
         display:none;
     }
 `
-
+export const AddFavButton = styled.button`
+    background-color:transparent;
+    border:none;
+    cursor: pointer;
+    font-size:20px;
+`

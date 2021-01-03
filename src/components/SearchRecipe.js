@@ -1,93 +1,170 @@
-import React,{useState} from 'react';
-import * as style from  '../style/searchRecipeStyle';
-import Checkbox from '@material-ui/core/Checkbox';
-import { FormControlLabel } from '@material-ui/core';
+import React, { useState, useEffect } from "react";
+import * as style from "../style/searchRecipeStyle";
+import Checkbox from "@material-ui/core/Checkbox";
+import { FormControlLabel } from "@material-ui/core";
+import ViewRecipe from "./ViewRecipe";
 const SearchRecipe = () => {
-
-    const [cuisineOfRecipe, setCuisineOfRecipe] = useState({
-        African:false,
-        American:false,
-        British:false,
-        Chinese:false,
-        French:false,
-        Indian:false,
-        Italian:false,
-        Mexican:false,
-    })
-
-    const [diet, setDiet] = useState({
-        GlutenFree:false,
-        Ketogenic:false,
-        Vegetarian:false,
-        Vegan:false,
-        Paelo:false,
-    })
-
-    const handleChange = (event) =>{
-        
-        const name = event.target.name;
-        setCuisineOfRecipe({
-            ...cuisineOfRecipe,[name]:event.target.checked,
-        })
-    }
-
-    return ( 
-        <style.MainContainer>
-            <form></form>
-            <div>
-            <style.CheckboxContainer>
-            <style.HeaderOfChecbox>Cuisines</style.HeaderOfChecbox>
-               <FormControlLabel control={
-                   <Checkbox checked={cuisineOfRecipe.African} onChange={handleChange} name="African" />
-               }
-                label="African"
-               />
-                <FormControlLabel control={
-                   <Checkbox checked={cuisineOfRecipe.American} onChange={handleChange} name="American" />
-               }
-                label="American"
-               /> 
-                <FormControlLabel control={
-                   <Checkbox checked={cuisineOfRecipe.British} onChange={handleChange} name="British" />
-               }
-                label="British"
-               />
-               <FormControlLabel control={
-                   <Checkbox checked={cuisineOfRecipe.Chinese} onChange={handleChange} name="Chinese" />
-               }
-                label="Chinese"
-               />
-               <FormControlLabel control={
-                   <Checkbox checked={cuisineOfRecipe.French} onChange={handleChange} name="French" />
-               }
-                label="French"
-               />
-               <FormControlLabel control={
-                   <Checkbox checked={cuisineOfRecipe.Indian} onChange={handleChange} name="Indian" />
-               }
-                label="Indian"
-               />
-               <FormControlLabel control={
-                   <Checkbox checked={cuisineOfRecipe.Italian} onChange={handleChange} name="Italian" />
-               }
-                label="Italian"
-               />
-               <FormControlLabel control={
-                   <Checkbox checked={cuisineOfRecipe.Mexican} onChange={handleChange} name="Mexica" />
-               }
-                label="Mexican"
-               />
-               <style.HeaderOfChecbox>Diet Definitions</style.HeaderOfChecbox>
-               <FormControlLabel control={
-                   <Checkbox checked={diet.GlutenFree} onChange={handleChange} name="GlutenFree" />
-               }
-                label="Gluten Free"
-               />
-            </style.CheckboxContainer>
-            </div>
-           
-        </style.MainContainer>
-     );
-}
  
+  const [optionCuisine, setOptionCuisine] = useState({
+      African:false,
+      American:false,
+      British:false,
+      Chinese:false,
+      French:false,
+      Indian:false,
+      Italian:false,
+      Mexican:false,
+  })
+
+  const [cuisineArray, setCuisineArray] = useState([]);
+
+  const [inputValue, setInputValue] = useState("");
+
+  const [searchRecipe, setSearchRecipe] = useState({
+    loading: true,
+    information: [],
+  });
+
+  useEffect(() => {
+    const API = `https://api.spoonacular.com/recipes/complexSearch?query=${inputValue}&instructionsRequired=true&number=99&apiKey=210c10f0f72a4f999d2c566a257ce155`;
+    fetch(API)
+      .then((response) => {
+        if (response.ok) {
+          return response;
+        }
+        throw Error("Dont work :(");
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        setSearchRecipe({
+          information: data.results,
+          loading: false,
+        });
+      });
+  }, [inputValue]);
+
+  
+  const viewSearch = searchRecipe.information.map((el) => (
+    <ViewRecipe key={el.id} el={el} />
+  )); 
+
+  const handleChangeCuisine = (event) =>{
+    const inputName = event.target.name;
+    
+    setOptionCuisine({
+      ...optionCuisine,
+      [inputName]:event.target.checked,
+    })
+   
+  };
+
+  return (
+    <>
+      {!SearchRecipe.loading && (
+        <style.MainContainer>
+          <style.CheckboxContainer>
+            <style.HeaderOfChecbox>Cuisines</style.HeaderOfChecbox>
+            <FormControlLabel
+              control={
+                <Checkbox
+                   checked={optionCuisine.African}
+                  onChange={handleChangeCuisine}
+                  name="African"
+                />
+              }
+              label="African"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={optionCuisine.American}
+                  onChange={handleChangeCuisine}
+                  name="American"
+                />
+              }
+              label="American"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={optionCuisine.British}
+                  onChange={handleChangeCuisine}
+                  name="British"
+                />
+              }
+              label="British"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={optionCuisine.Chinese}
+                  onChange={handleChangeCuisine}
+                  name="Chinese"
+                />
+              }
+              label="Chinese"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={optionCuisine.French}
+                  onChange={handleChangeCuisine}
+                  name="French"
+                />
+              }
+              label="French"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={optionCuisine.Indian}
+                  onChange={handleChangeCuisine}
+                  name="Indian"
+                />
+              }
+              label="Indian"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={optionCuisine.Italian}
+                  onChange={handleChangeCuisine}
+                  name="Italian"
+                />
+              }
+              label="Italian"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={optionCuisine.Mexican}
+                  onChange={handleChangeCuisine}
+                  name="Mexica"
+                />
+              }
+              label="Mexican"
+            />
+            
+          </style.CheckboxContainer>
+          <style.SearchRecipeContainer>
+            <style.SearchForm>
+              <style.InputText
+                value={inputValue}
+                onChange={(event) => setInputValue(event.target.value)}
+                placeholder="Na Co Masz Ochotę"
+                type="text"
+              />
+            </style.SearchForm>
+            <style.SearchViewContainer>
+              {searchRecipe.information.map((el) => (
+                <ViewRecipe key={el.id} el={el} />
+              ))}
+            </style.SearchViewContainer>
+          </style.SearchRecipeContainer>
+        </style.MainContainer>
+      )}
+    </>
+  );
+};
+
 export default SearchRecipe;

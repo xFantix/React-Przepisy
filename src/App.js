@@ -10,11 +10,14 @@ import SearchRecipe from "./components/SearchRecipe";
 const App = () => {
   const [topRecipe, setTopRecipe] = useState([]);
   const [recipeInfo,setRecipeInfo] = useState({});
+  const[favouriteRecipe,setFavouriteRecipe] = useState([]);
 
   return (
     <Router>
       <AppContext.Provider
         value={{
+          favouriteRecipe,
+          setFavouriteRecipe,
           topRecipe,
           setTopRecipe,
           recipeInfo,
