@@ -7,6 +7,7 @@ import RecipeInformation from './components/RecipeInformation';
 import Home from "./components/home/Home";
 import Navigation from "./components/Navigation";
 import SearchRecipe from "./components/SearchRecipe";
+import FavouriteRecipe from './components/FavouriteRecipe'
 const App = () => {
   const [topRecipe, setTopRecipe] = useState([]);
   const [recipeInfo,setRecipeInfo] = useState({});
@@ -30,9 +31,9 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/recipe/:id" component={RecipeInformation} />
             <Route path="/searchRecipe" component={SearchRecipe}/>
+            <Route path="/favouriteRecipe" component={FavouriteRecipe}/>
           </Switch>
         </style.AppStyle>
-        {/* <Footer/> */}
       </AppContext.Provider>
     </Router>
   );

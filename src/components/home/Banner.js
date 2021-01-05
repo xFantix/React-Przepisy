@@ -1,13 +1,18 @@
-import React from 'react';
-import * as style from '../../style/bannerStyle';
+import React from "react";
+import * as style from "../../style/bannerStyle";
 const Banner = () => {
-    return ( 
-        <style.Container>
-        <style.Header>Kuchnia całego Świata w jednym miejscu</style.Header>
-        <style.MediumHeader>Sprawdz setki przepisów z całego świata i zaskocz swoją rodzinę i przyjaciół</style.MediumHeader>
-        <style.ButtonLink to="/searchRecipe"><style.Button>zobacz przepisy</style.Button></style.ButtonLink>
-        </style.Container>
-     );
-}
- 
+  return (
+    <style.Container>
+      <style.Header>Cuisine of the whole world in one place</style.Header>
+      <style.MediumHeader>
+        Check out hundreds of recipes from around the world and surprise your
+        family and friends
+      </style.MediumHeader>
+      <style.ButtonLink to="/searchRecipe">
+        <style.Button>Check out recipe</style.Button>
+      </style.ButtonLink>
+    </style.Container>
+  );
+};
+
 export default Banner;

@@ -4,17 +4,16 @@ import Checkbox from "@material-ui/core/Checkbox";
 import { FormControlLabel } from "@material-ui/core";
 import ViewRecipe from "./ViewRecipe";
 const SearchRecipe = () => {
- 
   const [optionCuisine, setOptionCuisine] = useState({
-      African:false,
-      American:false,
-      British:false,
-      Chinese:false,
-      French:false,
-      Indian:false,
-      Italian:false,
-      Mexican:false,
-  })
+    African: false,
+    American: false,
+    British: false,
+    Chinese: false,
+    French: false,
+    Indian: false,
+    Italian: false,
+    Mexican: false,
+  });
 
   const [cuisineArray, setCuisineArray] = useState([]);
 
@@ -43,19 +42,17 @@ const SearchRecipe = () => {
       });
   }, [inputValue]);
 
-  
   const viewSearch = searchRecipe.information.map((el) => (
     <ViewRecipe key={el.id} el={el} />
-  )); 
+  ));
 
-  const handleChangeCuisine = (event) =>{
+  const handleChangeCuisine = (event) => {
     const inputName = event.target.name;
-    
+
     setOptionCuisine({
       ...optionCuisine,
-      [inputName]:event.target.checked,
-    })
-   
+      [inputName]: event.target.checked,
+    });
   };
 
   return (
@@ -67,7 +64,7 @@ const SearchRecipe = () => {
             <FormControlLabel
               control={
                 <Checkbox
-                   checked={optionCuisine.African}
+                  checked={optionCuisine.African}
                   onChange={handleChangeCuisine}
                   name="African"
                 />
@@ -144,14 +141,13 @@ const SearchRecipe = () => {
               }
               label="Mexican"
             />
-            
           </style.CheckboxContainer>
           <style.SearchRecipeContainer>
             <style.SearchForm>
               <style.InputText
                 value={inputValue}
                 onChange={(event) => setInputValue(event.target.value)}
-                placeholder="Na Co Masz Ochotę"
+                placeholder="What do you want?"
                 type="text"
               />
             </style.SearchForm>

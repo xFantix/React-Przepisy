@@ -5,6 +5,4 @@ export const AppContext = createContext({
     setTopRecipe:()=>{},
     recipeInfo:{},
     setRecipeInfo:()=>{},
-    favouriteRecie:[],
-    setFavouriteRecipe:()=>{},
 });
