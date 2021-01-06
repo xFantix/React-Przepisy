@@ -25,14 +25,16 @@ export const NavigationList = styled.ul`
     list-style:none;
     align-items:center;
     padding-right:40px;
-    @media(max-width:860px){
-        display:none;
-    }
 `
 export const ElementOfList = styled.li`
     text-decoration:none;
     color:white;
     padding:0px 10px;
+    @media(max-width:860px){
+        &:nth-child(1){
+            display:none;
+        }
+    }
 `
 export const LinkList = styled(NavLink)`
     color:white;

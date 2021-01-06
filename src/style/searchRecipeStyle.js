@@ -10,26 +10,9 @@ export const MainContainer = styled.div`
         padding:30px 0px;
     }
 `
-export const CheckboxContainer = styled.div`
-    display:flex;
-    flex-direction:column;
-    padding:35px 35px 25px 35px;
-    border:1px solid #e1e1e1;
-    max-height:80vh;
-    min-width:300px;
-    @media(max-width:860px){
-        display:none;
-    }
-`
 
-export const HeaderOfChecbox = styled.h2`
-    font-family:${fontMontserrat};
-    color:#FFD800;
-    font-size:35px;
-    padding-top:5px;
-`
 export const SearchRecipeContainer = styled.div`
-    flex-grow:1;
+  padding:0px 90px;
     display:flex;
     flex-direction:column;
     
