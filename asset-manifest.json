@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/React-Przepisy/static/css/main.70426db2.chunk.css",
+    "main.js": "/React-Przepisy/static/js/main.3a3226fb.chunk.js",
+    "main.js.map": "/React-Przepisy/static/js/main.3a3226fb.chunk.js.map",
+    "runtime-main.js": "/React-Przepisy/static/js/runtime-main.d7b1787c.js",
+    "runtime-main.js.map": "/React-Przepisy/static/js/runtime-main.d7b1787c.js.map",
+    "static/js/2.96da0e36.chunk.js": "/React-Przepisy/static/js/2.96da0e36.chunk.js",
+    "static/js/2.96da0e36.chunk.js.map": "/React-Przepisy/static/js/2.96da0e36.chunk.js.map",
+    "index.html": "/React-Przepisy/index.html",
+    "static/css/main.70426db2.chunk.css.map": "/React-Przepisy/static/css/main.70426db2.chunk.css.map",
+    "static/js/2.96da0e36.chunk.js.LICENSE.txt": "/React-Przepisy/static/js/2.96da0e36.chunk.js.LICENSE.txt",
+    "static/media/banner-food.6b517c6b.jpg": "/React-Przepisy/static/media/banner-food.6b517c6b.jpg",
+    "static/media/britFood.03c129c2.jpg": "/React-Przepisy/static/media/britFood.03c129c2.jpg",
+    "static/media/indianFood.a060d54b.jpg": "/React-Przepisy/static/media/indianFood.a060d54b.jpg",
+    "static/media/itFood.3d83765f.jpg": "/React-Przepisy/static/media/itFood.3d83765f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d7b1787c.js",
+    "static/js/2.96da0e36.chunk.js",
+    "static/css/main.70426db2.chunk.css",
+    "static/js/main.3a3226fb.chunk.js"
+  ]
+}
